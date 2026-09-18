@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="<%= defaultLang === 'zh' ? 'zh-Hant' : 'en' %>">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= content[defaultLang].meta.title %></title>
+  <meta name="description" content="<%= content[defaultLang].meta.description %>" />
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">SY<span class="brand-dot">.</span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" data-i18n="nav.about"></a>
+        <a href="#work" data-i18n="nav.work"></a>
+        <a href="#experience" data-i18n="nav.experience"></a>
+        <a href="#skills" data-i18n="nav.skills"></a>
+        <a href="#credentials" data-i18n="nav.credentials"></a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" id="langToggle" class="lang-toggle" aria-label="Switch language"></button>
+        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav.hireMe"></a>
+        <button type="button" id="menuToggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow reveal" data-i18n="hero.eyebrow"></p>
+          <h1 class="hero-title reveal" data-i18n="hero.title"></h1>
+          <p class="hero-subtitle reveal" data-i18n="hero.subtitle"></p>
+          <p class="hero-lead reveal" data-i18n="hero.lead"></p>
+          <div class="hero-ctas reveal">
+            <a href="#work" class="btn btn-primary" data-i18n="hero.ctaPrimary"></a>
+          </div>
+          <div class="hero-stats reveal" id="statsRow"></div>
+        </div>
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="avatar-ring">
+            <div class="avatar-core">SY</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="section-heading reveal">
+          <p class="kicker" data-i18n="about.kicker"></p>
+          <h2 data-i18n="about.title"></h2>
+        </div>
+        <div class="about-body reveal">
+          <p data-i18n="about.paragraphs.0"></p>
+          <p data-i18n="about.paragraphs.1"></p>
+          <h3 class="philosophy-title" data-i18n="about.philosophyTitle"></h3>
+          <p class="philosophy" data-i18n="about.philosophy"></p>
+        </div>
+        <div class="about-facts reveal" id="factsList"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="work">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="kicker" data-i18n="work.kicker"></p>
+          <h2 data-i18n="work.title"></h2>
+          <p class="section-intro" data-i18n="work.intro"></p>
+        </div>
+        <div class="work-grid" id="workGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="kicker" data-i18n="experience.kicker"></p>
+          <h2 data-i18n="experience.title"></h2>
+        </div>
+        <div class="timeline" id="experienceList"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="kicker" data-i18n="skills.kicker"></p>
+          <h2 data-i18n="skills.title"></h2>
+        </div>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="credentials">
+      <div class="container credentials-grid">
+        <div class="section-heading reveal">
+          <p class="kicker" data-i18n="credentials.kicker"></p>
+          <h2 data-i18n="credentials.title"></h2>
+        </div>
+        <div class="credentials-col reveal">
+          <h3 data-i18n="credentials.educationTitle"></h3>
+          <div id="educationList"></div>
+        </div>
+        <div class="credentials-col reveal">
+          <h3 data-i18n="credentials.certificationsTitle"></h3>
+          <ul class="cert-list" id="certList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="kicker" data-i18n="contact.kicker"></p>
+          <h2 data-i18n="contact.title"></h2>
+          <p data-i18n="contact.lead"></p>
+          <p class="contact-email">
+            <span data-i18n="contact.emailLabel"></span>:
+            <a href="mailto:<%= contactEmail %>"><%= contactEmail %></a>
+          </p>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name" data-i18n="contact.formName"></label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="email" data-i18n="contact.formEmail"></label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="message" data-i18n="contact.formMessage"></label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <div class="field field-hp" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="submitBtn" data-i18n="contact.formSubmit"></button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Sheng-Yuan Su &middot; <span data-i18n="footer.rights"></span></p>
+      <p data-i18n="footer.builtWith"></p>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous screenshot">&#8249;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+      <p class="lightbox-counter" id="lightboxCounter"></p>
+    </div>
+    <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next screenshot">&#8250;</button>
+  </div>
+
+  <script>
+    window.__CONTENT__ = <%- contentJSON %>;
+    window.__DEFAULT_LANG__ = "<%= defaultLang %>";
+  </script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

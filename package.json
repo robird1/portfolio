@@ -1,0 +1,15 @@
+{
+  "name": "sheng-yuan-su-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Freelance Android/AI engineer portfolio site.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
