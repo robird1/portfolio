@@ -272,47 +272,6 @@
     });
   }
 
-  function initContactForm() {
-    const form = document.getElementById('contactForm');
-    const status = document.getElementById('formStatus');
-    const submitBtn = document.getElementById('submitBtn');
-
-    form.addEventListener('submit', async (evt) => {
-      evt.preventDefault();
-      const formData = new FormData(form);
-      const payload = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        message: formData.get('message'),
-        website: formData.get('website'),
-      };
-
-      submitBtn.disabled = true;
-      const originalLabel = submitBtn.textContent;
-      submitBtn.textContent = content[currentLang].contact.formSending;
-      status.classList.remove('is-error', 'is-success');
-      status.textContent = '';
-
-      try {
-        const res = await fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        });
-        if (!res.ok) throw new Error('Request failed');
-        status.textContent = content[currentLang].contact.formSuccess;
-        status.classList.add('is-success');
-        form.reset();
-      } catch (err) {
-        status.textContent = content[currentLang].contact.formError;
-        status.classList.add('is-error');
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalLabel;
-      }
-    });
-  }
-
   document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('year').textContent = new Date().getFullYear();
     setLanguage(currentLang);
@@ -320,7 +279,6 @@
     initHeaderScroll();
     initMobileMenu();
     initLangToggle();
-    initContactForm();
     initLightbox();
   });
 })();

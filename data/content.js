@@ -7,7 +7,7 @@
 const content = {
   en: {
     meta: {
-      title: 'Sheng-Yuan Su — Android & AI Engineer',
+      title: 'Steve Su — Android & AI Engineer',
       description:
         'Android & AI software engineer with a decade of experience shipping consumer electronics, IoT, and on-device AI products.',
     },
@@ -22,7 +22,8 @@ const content = {
     },
     hero: {
       eyebrow: 'Software Engineer',
-      title: 'Sheng-Yuan Su',
+      title: 'Steve Su',
+      secondaryName: 'Sheng-Yuan Su',
       subtitle: 'Android & On-Device AI Engineer',
       lead: 'I build fast, reliable Android products that talk to hardware, stream video in real time, and run AI on-device — for consumer electronics, IoT, and medical devices.',
       ctaPrimary: 'View My Work',
@@ -357,13 +358,6 @@ const content = {
       kicker: 'Get in touch',
       lead: 'Looking for an Android or on-device AI engineer to join your team? I’m currently open to full-time opportunities, including remote roles.',
       emailLabel: 'Email',
-      formName: 'Name',
-      formEmail: 'Email',
-      formMessage: 'Project details',
-      formSubmit: 'Send Message',
-      formSending: 'Sending…',
-      formSuccess: 'Thanks — your message has been sent. I’ll get back to you soon.',
-      formError: 'Something went wrong. Please try again or email me directly.',
     },
     footer: {
       rights: 'All rights reserved.',
@@ -389,6 +383,7 @@ const content = {
     hero: {
       eyebrow: '軟體工程師',
       title: '蘇聖元',
+      secondaryName: 'Steve Su',
       subtitle: 'Android 與裝置端 AI 工程師',
       lead: '我專注打造快速、穩定的 Android 產品，串接硬體、即時影像串流，並在裝置端運行 AI 模型 —— 服務消費性電子、IoT 與醫療裝置產業。',
       ctaPrimary: '瀏覽作品',
@@ -613,7 +608,7 @@ const content = {
           company: '個人工作室',
           location: '台北市',
           period: '2026/4 – 至今',
-          description: '為消費性電子與 AI 整合產品提供獨立 Android 開發服務。',
+          description: '為多元產業提供獨立 Android 與 AI 整合開發服務。',
         },
         {
           role: '資深 Android App 工程師',
@@ -702,13 +697,6 @@ const content = {
       kicker: '聯絡我',
       lead: '正在尋找 Android 或裝置端 AI 工程師加入團隊嗎？我目前正在尋找全職機會，也樂於遠端工作。',
       emailLabel: '電子郵件',
-      formName: '姓名',
-      formEmail: '電子郵件',
-      formMessage: '專案內容',
-      formSubmit: '送出訊息',
-      formSending: '傳送中…',
-      formSuccess: '感謝您的訊息，我會盡快回覆您。',
-      formError: '發生錯誤，請稍後再試，或直接以電子郵件聯繫我。',
     },
     footer: {
       rights: '版權所有。',
