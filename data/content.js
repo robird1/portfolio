@@ -25,7 +25,7 @@ const content = {
       title: 'Steve Su',
       secondaryName: 'Sheng-Yuan Su',
       subtitle: 'Android & On-Device AI Engineer',
-      lead: 'I build fast, reliable Android products that talk to hardware, stream video in real time, and run AI on-device — for consumer electronics, IoT, and medical devices.',
+      lead: 'I build fast, reliable Android products that talk to hardware, stream video in real time, and run AI on-device — for industries such as consumer electronics, IoT, and medical devices.',
       ctaPrimary: 'View My Work',
       stats: [
         { value: '10', label: 'Years shipping Android' },
@@ -44,8 +44,8 @@ const content = {
         'Writing well-designed software — simple, flexible, easy to change, easy to maintain, easy to test — has never been easy, but it’s the standard I’ve always held myself to. I make good use of principles like SOLID and common design patterns to keep code structured and flexible. I’ve always believed that taking something complex and making it simple is exactly what separates an expert from a beginner.',
       facts: [
         { label: 'Based in', value: 'Taipei, Taiwan' },
-        { label: 'Open to', value: 'Remote collaboration' },
-        { label: 'Languages', value: 'Mandarin (native), English (Conversational)' },
+        { label: 'Open to', value: 'Full-time, part-time & remote roles' },
+        { label: 'Languages', value: 'Mandarin (native), English (Working Proficiency)' },
       ],
     },
     work: {
@@ -356,7 +356,7 @@ const content = {
     contact: {
       title: 'Let’s Work Together',
       kicker: 'Get in touch',
-      lead: 'Looking for an Android or on-device AI engineer to join your team? I’m currently open to full-time opportunities, including remote roles.',
+      lead: 'Looking for an Android or on-device AI engineer to join your team? I’m currently open to full-time and part-time opportunities, including remote roles.',
       emailLabel: 'Email',
     },
     footer: {
@@ -385,7 +385,7 @@ const content = {
       title: '蘇聖元',
       secondaryName: 'Steve Su',
       subtitle: 'Android 與裝置端 AI 工程師',
-      lead: '我專注打造快速、穩定的 Android 產品，串接硬體、即時影像串流，並在裝置端運行 AI 模型 —— 服務消費性電子、IoT 與醫療裝置產業。',
+      lead: '我專注打造快速、穩定的 Android 產品，串接硬體、即時影像串流，並在裝置端運行 AI 模型 —— 服務消費性電子、IoT 與醫療裝置等產業。',
       ctaPrimary: '瀏覽作品',
       stats: [
         { value: '10', label: '年 Android 開發資歷' },
@@ -404,8 +404,8 @@ const content = {
         '撰寫一個設計良好的軟體——簡單、有彈性、容易更改、好維護、易於測試——從來不是件容易的事，但這是我一直以來的自我要求與努力方向。我善用 SOLID 等設計原則與常見設計模式，讓程式碼保持結構清晰與彈性。我始終相信，能將複雜的事物化繁為簡，正是專家與新手的差異所在。',
       facts: [
         { label: '所在地', value: '台灣台北' },
-        { label: '工作型態', value: '對遠端工作有意願' },
-        { label: '語言能力', value: '中文（母語）、英文（可溝通）' },
+        { label: '工作型態', value: '全職、兼職與遠端工作皆可' },
+        { label: '語言能力', value: '中文（母語）、英文（可用於工作溝通）' },
       ],
     },
     work: {
@@ -695,7 +695,7 @@ const content = {
     contact: {
       title: '一起合作吧',
       kicker: '聯絡我',
-      lead: '正在尋找 Android 或裝置端 AI 工程師加入團隊嗎？我目前正在尋找全職機會，也樂於遠端工作。',
+      lead: '正在尋找 Android 或裝置端 AI 工程師加入團隊嗎？我目前正在尋找全職與兼職機會，也樂於遠端工作。',
       emailLabel: '電子郵件',
     },
     footer: {
